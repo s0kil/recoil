@@ -12,8 +12,6 @@ export function dashed() {}
 
 export function dotted() {}
 
-export function dotted() {}
-
 export function rounded() {}
 
 export function roundEach() {}

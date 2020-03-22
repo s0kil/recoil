@@ -20,6 +20,11 @@ const Recoil = {
           MutationLock.unlock();
           Recoil[key] = toUpdate[key];
 
+          /* THINK
+            When A Function Is Dependent On More Than One Arguments,
+            That Will Cause Multiple Re-Renders. Maybe Have A Queue?
+          */
+
           // If Binding Exists
           if (key in Bindings) {
             // Call All Functions That Contain Bindings
@@ -44,7 +49,7 @@ const Recoil = {
     );
 
     inEach(reactiveFunctionArguments, arg => {
-      // Set `argument` To Array Of Dependent Functions
+      // Bind `argument` To Array Of Dependent Functions
       if (arg in Bindings) {
         Bindings[arg].push(reactiveFunction);
       } else {

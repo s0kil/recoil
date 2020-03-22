@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "poi --serve",
-    "build": "poi --production",
+    "build": "poi --production --public-url ./",
     "serve": "cd dist && python3 -m http.server 4000"
   },
   "keywords": [],
