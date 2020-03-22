@@ -1,3 +1,7 @@
+import * as background from "./element/background";
+import * as border from "./element/border";
+import * as font from "./element/font";
+
 import { $, $$, _ } from "./recoil";
 import {
   alignRight,
@@ -12,10 +16,6 @@ import {
   text,
   width
 } from "./element";
-
-import background from "./element/background";
-import border from "./element/border";
-import font from "./element/font";
 
 _.Element = el(
   [
@@ -45,7 +45,7 @@ _.person = {
 // Since Recoil.Objects Are Immutable,
 // We Update A Target Property,
 // By Including The Properties Of The Old Target Object
-// Instead Of: `_.person.age = Infinity;`
+// So Instead Of: `_.person.age = Infinity;`, We Do:
 $({
   person: {
     ..._.person,
@@ -72,5 +72,5 @@ $({
   }
 });
 
-// Begin The Chaos
+// Begin The Chaos, Start Render Engine
 _.erupt(layout([], _.RowOfStuff));

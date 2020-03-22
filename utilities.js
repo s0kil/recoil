@@ -11,6 +11,7 @@ export function inEach(items, callback) {
 }
 
 export function functionArguments(func) {
+  // Would Be Good To Have: `func.arguments`
   const functionAsString = func.toString();
   return functionAsString
     .slice(functionAsString.indexOf("(") + 1, functionAsString.indexOf(")"))

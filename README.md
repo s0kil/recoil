@@ -81,3 +81,9 @@ $({
 _.erupt(layout([], _.RowOfStuff));
 
 ```
+
+#### Why
+
+- Harmonize: Styling/Layout, Reactive State Management, Render Engine.
+- Lightweight.
+- Simple API.
