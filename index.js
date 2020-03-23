@@ -1,37 +1,5 @@
-import * as background from "./element/background";
-import * as border from "./element/border";
-import * as font from "./element/font";
-
 import { $, $$, _ } from "./recoil";
-import {
-  alignRight,
-  centerY,
-  el,
-  fill,
-  layout,
-  padding,
-  rbg255,
-  row,
-  spacing,
-  text,
-  width
-} from "./element";
 import { html, render } from "lit-html";
-
-_.Element = el(
-  [
-    background.color(rbg255(240, 0, 245)),
-    font.color(rbg255(255, 255, 255)),
-    border.rounded(3),
-    padding(30)
-  ],
-  text("Stylish")
-);
-
-_.RowOfStuff = row(
-  [width(fill()), centerY(), spacing(30)],
-  [_.Element, _.Element, el([alignRight()], _.Element)]
-);
 
 _.numbers = [1, 2, 3, 4, 5];
 $({ numbers: [..._.numbers, 6] });
@@ -59,8 +27,10 @@ $({
 // TODO: Use `Button` As `_.Button()`,
 // The Component Will Be Re-Rendered,
 // If The Function Dependencies Change
-$$(function Button(person, numbers) {
-  return el([], text("Button"));
+$$(function Button(numbers) {
+  return html`
+    <button>${[...numbers]}</button>
+  `;
 });
 
 // `$$` Creates A Reactive Subscriber,
@@ -75,9 +45,6 @@ $({
     name: "Dan The Man"
   }
 });
-
-// Begin The Chaos, Start Render Engine
-// _.erupt(layout([], _.RowOfStuff));
 
 // Reactive HTML Templates
 $$(person => {

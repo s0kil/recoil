@@ -53,10 +53,7 @@ const Recoil = {
         Bindings[arg] = [reactiveFunction];
       }
     });
-  },
-
-  // `erupt` Starts The Application
-  erupt: function() {}
+  }
 };
 
 // (State => Function) Dependencies
