@@ -1,0 +1,14 @@
+{
+  "name": "lit-html",
+  "main": "index.js",
+  "scripts": {
+    "dev": "poi --serve"
+  },
+  "dependencies": {
+    "lit-html": "^1.2.1",
+    "recoil": "link:../.."
+  },
+  "devDependencies": {
+    "poi": "^12.7.5"
+  }
+}

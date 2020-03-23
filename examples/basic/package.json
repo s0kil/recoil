@@ -1,0 +1,13 @@
+{
+  "name": "basic",
+  "main": "index.js",
+  "scripts": {
+    "dev": "poi --serve"
+  },
+  "dependencies": {
+    "recoil": "file:../../"
+  },
+  "devDependencies": {
+    "poi": "^12.7.5"
+  }
+}
