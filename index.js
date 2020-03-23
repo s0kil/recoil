@@ -63,3 +63,21 @@ setInterval(() => {
     }
   });
 }, 100);
+
+// Benchmark Reactivity
+_.bench = 0;
+console.time("simpleReactiveBenchmarkMillionUpdates");
+for (let i = 0; i < 1000000; i++) {
+  $({
+    bench: i + Math.random()
+  });
+}
+console.timeEnd("simpleReactiveBenchmarkMillionUpdates");
+
+// Benchmark Without Reactivity
+let bencher = 0;
+console.time("simpleBenchmarkMillionUpdates");
+for (let i = 0; i < 1000000; i++) {
+  bencher = i + Math.random();
+}
+console.timeEnd("simpleBenchmarkMillionUpdates");
