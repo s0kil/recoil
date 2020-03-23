@@ -1,5 +1,5 @@
 devDependencies:
-  memoize-one: 5.1.1
+  lit-html: 1.2.1
   poi: 12.7.5
 lockfileVersion: 5.1
 packages:
@@ -11,7 +11,7 @@ packages:
       integrity: sha512-a9gxpmdXtZEInkCSHUJDLHZVBgb1QS0jhss4cPP93EW7s+uC5bikET2twEF3KV+7rDblJcmNvTR7VJejqd2C2g==
   /@babel/compat-data/7.9.0:
     dependencies:
-      browserslist: 4.10.0
+      browserslist: 4.11.0
       invariant: 2.2.4
       semver: 5.7.1
     dev: true
@@ -81,7 +81,7 @@ packages:
     dependencies:
       '@babel/compat-data': 7.9.0
       '@babel/core': 7.9.0
-      browserslist: 4.10.0
+      browserslist: 4.11.0
       invariant: 2.2.4
       levenary: 1.1.1
       semver: 5.7.1
@@ -918,7 +918,7 @@ packages:
       '@babel/plugin-transform-unicode-regex': 7.8.3_@babel+core@7.9.0
       '@babel/preset-modules': 0.1.3_@babel+core@7.9.0
       '@babel/types': 7.9.0
-      browserslist: 4.10.0
+      browserslist: 4.11.0
       core-js-compat: 3.6.4
       invariant: 2.2.4
       levenary: 1.1.1
@@ -1642,7 +1642,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Z942RysHXmJrhqk88FmKBVq/v5tqmSkDz7p54G/MGyjMnCFFnC79XWNbg+Vta8W6Wb2qtSZTSxIGkJrRpCFEiA==
-  /browserslist/4.10.0:
+  /browserslist/4.11.0:
     dependencies:
       caniuse-lite: 1.0.30001035
       electron-to-chromium: 1.3.380
@@ -1651,7 +1651,7 @@ packages:
     dev: true
     hasBin: true
     resolution:
-      integrity: sha512-TpfK0TDgv71dzuTsEAlQiHeWQ/tiPqgNZVdv046fvNtBZrjbv2O3TsWCDU0AWGJJKCF/KsjNdLzR9hXOsh/CfA==
+      integrity: sha512-WqEC7Yr5wUH5sg6ruR++v2SGOQYpyUdYYd4tZoAq1F7y+QXoLoYGXVbxhtaIqWmAJjtNTRjVD3HuJc1OXTel2A==
   /buffer-from/1.1.1:
     dev: true
     resolution:
@@ -1812,7 +1812,7 @@ packages:
       integrity: sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
   /caniuse-api/3.0.0:
     dependencies:
-      browserslist: 4.10.0
+      browserslist: 4.11.0
       caniuse-lite: 1.0.30001035
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
@@ -2141,7 +2141,7 @@ packages:
       integrity: sha512-P15M5ZC8dyCjQHWwd4Ia/dm0SgVvZJMYeykVIVYXbGyqO4dWB5oyPHp9i7wjwo5LhtlhKbiBCdS2NvM07Wlybg==
   /core-js-compat/3.6.4:
     dependencies:
-      browserslist: 4.10.0
+      browserslist: 4.11.0
       semver: 7.0.0
     dev: true
     resolution:
@@ -2719,7 +2719,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g==
-  /es-abstract/1.17.4:
+  /es-abstract/1.17.5:
     dependencies:
       es-to-primitive: 1.2.1
       function-bind: 1.1.1
@@ -2736,7 +2736,7 @@ packages:
     engines:
       node: '>= 0.4'
     resolution:
-      integrity: sha512-Ae3um/gb8F0mui/jPL+QiqmglkUsaQf7FwBEHYIFkztkneosu9imhqHpBzQ3h1vit8t5iQ74t6PEVvphBZiuiQ==
+      integrity: sha512-BR9auzDbySxOcfog0tLECW8l28eRGpDpU3Dm3Hp4q/N+VtLTmyj4EUN088XZWQDW/hzj6sYRDXeOFsaAODKvpg==
   /es-to-primitive/1.2.1:
     dependencies:
       is-callable: 1.1.5
@@ -4064,6 +4064,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
+  /lit-html/1.2.1:
+    dev: true
+    resolution:
+      integrity: sha512-GSJHHXMGLZDzTRq59IUfL9FCdAlGfqNp/dEa7k7aBaaWD+JKaCjsAk9KYm2V12ItonVaYx2dprN66Zdm1AuBTQ==
   /loader-runner/2.4.0:
     dev: true
     engines:
@@ -4224,10 +4228,6 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-qX2bG48pTqYRVmDB37rn/6PT7LcR8T7oAX3bf99u1Tt1nzxYfxkgqDwUwolPlXweM0XzBOBFzSx4kfp7KP1s/w==
-  /memoize-one/5.1.1:
-    dev: true
-    resolution:
-      integrity: sha512-HKeeBpWvqiVJD57ZUAsJNm71eHTykffzcLZVYWiVfQeI1rJtuEaS7hQiEpWfVVk18donPwJEcFKIkCmPJNOhHA==
   /memory-fs/0.4.1:
     dependencies:
       errno: 0.1.7
@@ -4662,7 +4662,7 @@ packages:
   /object.getownpropertydescriptors/2.1.0:
     dependencies:
       define-properties: 1.1.3
-      es-abstract: 1.17.4
+      es-abstract: 1.17.5
     dev: true
     engines:
       node: '>= 0.8'
@@ -4679,7 +4679,7 @@ packages:
   /object.values/1.1.1:
     dependencies:
       define-properties: 1.1.3
-      es-abstract: 1.17.4
+      es-abstract: 1.17.5
       function-bind: 1.1.1
       has: 1.0.3
     dev: true
@@ -5127,7 +5127,7 @@ packages:
       integrity: sha512-rofZFHUg6ZIrvRwPeFktv06GdbDYLcGqh9EwiMutZg+a0oePCCw1zHOEiji6LCpyRcjTREtPASuUqeAvYlEVvQ==
   /postcss-colormin/4.0.3:
     dependencies:
-      browserslist: 4.10.0
+      browserslist: 4.11.0
       color: 3.1.2
       has: 1.0.3
       postcss: 7.0.27
@@ -5211,7 +5211,7 @@ packages:
       integrity: sha512-alx/zmoeXvJjp7L4mxEMjh8lxVlDFX1gqWHzaaQewwMZiVhLo42TEClKaeHbRf6J7j82ZOdTJ808RtN0ZOZwvw==
   /postcss-merge-rules/4.0.3:
     dependencies:
-      browserslist: 4.10.0
+      browserslist: 4.11.0
       caniuse-api: 3.0.0
       cssnano-util-same-parent: 4.0.1
       postcss: 7.0.27
@@ -5245,7 +5245,7 @@ packages:
   /postcss-minify-params/4.0.2:
     dependencies:
       alphanum-sort: 1.0.2
-      browserslist: 4.10.0
+      browserslist: 4.11.0
       cssnano-util-get-arguments: 4.0.0
       postcss: 7.0.27
       postcss-value-parser: 3.3.1
@@ -5362,7 +5362,7 @@ packages:
       integrity: sha512-acwJY95edP762e++00Ehq9L4sZCEcOPyaHwoaFOhIwWCDfik6YvqsYNxckee65JHLKzuNSSmAdxwD2Cud1Z54A==
   /postcss-normalize-unicode/4.0.1:
     dependencies:
-      browserslist: 4.10.0
+      browserslist: 4.11.0
       postcss: 7.0.27
       postcss-value-parser: 3.3.1
     dev: true
@@ -5402,7 +5402,7 @@ packages:
       integrity: sha512-2fCObh5UanxvSxeXrtLtlwVThBvHn6MQcu4ksNT2tsaV2Fg76R2CV98W7wNSlX+5/pFwEyaDwKLLoEV7uRybAw==
   /postcss-reduce-initial/4.0.3:
     dependencies:
-      browserslist: 4.10.0
+      browserslist: 4.11.0
       caniuse-api: 3.0.0
       has: 1.0.3
       postcss: 7.0.27
@@ -5753,7 +5753,7 @@ packages:
   /regexp.prototype.flags/1.3.0:
     dependencies:
       define-properties: 1.1.3
-      es-abstract: 1.17.4
+      es-abstract: 1.17.5
     dev: true
     engines:
       node: '>= 0.4'
@@ -6415,7 +6415,7 @@ packages:
       integrity: sha1-u0P/VZim6wXYm1n80SnJgzE2Br8=
   /stylehacks/4.0.3:
     dependencies:
-      browserslist: 4.10.0
+      browserslist: 4.11.0
       postcss: 7.0.27
       postcss-selector-parser: 3.1.2
     dev: true
@@ -6781,7 +6781,7 @@ packages:
   /util.promisify/1.0.1:
     dependencies:
       define-properties: 1.1.3
-      es-abstract: 1.17.4
+      es-abstract: 1.17.5
       has-symbols: 1.0.1
       object.getownpropertydescriptors: 2.1.0
     dev: true
@@ -7122,5 +7122,5 @@ packages:
     resolution:
       integrity: sha512-Lhz8TLaYnxq/2ObqHDql8dX8CJi97oHxrjUcYtzKbbykPtVW9WB+poxI+NM2UIzsMgNCZTIf0AQwsjK5yMAqZw==
 specifiers:
-  memoize-one: ^5.1.1
+  lit-html: ^1.2.1
   poi: ^12.7.5

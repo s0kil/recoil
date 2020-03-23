@@ -3,6 +3,10 @@
 ## API
 
 ```JavaScript
+import * as background from "./element/background";
+import * as border from "./element/border";
+import * as font from "./element/font";
+
 import { $, $$, _ } from "./recoil";
 import {
   alignRight,
@@ -17,10 +21,7 @@ import {
   text,
   width
 } from "./element";
-
-import background from "./element/background";
-import border from "./element/border";
-import font from "./element/font";
+import { html, render } from "lit-html";
 
 _.Element = el(
   [
@@ -45,12 +46,13 @@ _.person = {
   name: "Daniel",
   age: NaN
 };
+
 // console.log("Person: ", _.person);
 
 // Since Recoil.Objects Are Immutable,
 // We Update A Target Property,
 // By Including The Properties Of The Old Target Object
-// Instead Of: `_.person.age = Infinity;`
+// So Instead Of: `_.person.age = Infinity;`, We Do:
 $({
   person: {
     ..._.person,
@@ -68,7 +70,9 @@ $$(function Button(person, numbers) {
 
 // `$$` Creates A Reactive Subscriber,
 // The Arguments To The Function Are Dependencies Of The Function
-$$(person => console.log("Person: ", person));
+// $$(person => console.log("Person: ", person));
+
+$$(numbers => console.log("Numbers: ", numbers));
 
 $({
   person: {
@@ -77,9 +81,26 @@ $({
   }
 });
 
-// Begin The Chaos
-_.erupt(layout([], _.RowOfStuff));
+// Begin The Chaos, Start Render Engine
+// _.erupt(layout([], _.RowOfStuff));
 
+// Reactive HTML Templates
+$$(person => {
+  const Person = person =>
+    html`
+      <div>${person.name} is ${person.age} years old.</div>
+    `;
+  render(Person(person), document.body);
+});
+
+setInterval(() => {
+  $({
+    person: {
+      ..._.person,
+      age: Math.round(Math.random() * 100)
+    }
+  });
+}, 100);
 ```
 
 #### Why

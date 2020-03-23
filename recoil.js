@@ -1,7 +1,4 @@
-import {
-  functionArgumentsMemoize as functionArguments,
-  inEach
-} from "./utilities";
+import { functionArguments, inEach } from "./utilities";
 
 // Recoil API
 const Recoil = {

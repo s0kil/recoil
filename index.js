@@ -16,6 +16,7 @@ import {
   text,
   width
 } from "./element";
+import { html, render } from "lit-html";
 
 _.Element = el(
   [
@@ -40,6 +41,7 @@ _.person = {
   name: "Daniel",
   age: NaN
 };
+
 // console.log("Person: ", _.person);
 
 // Since Recoil.Objects Are Immutable,
@@ -63,7 +65,9 @@ $$(function Button(person, numbers) {
 
 // `$$` Creates A Reactive Subscriber,
 // The Arguments To The Function Are Dependencies Of The Function
-$$(person => console.log("Person: ", person));
+// $$(person => console.log("Person: ", person));
+
+$$(numbers => console.log("Numbers: ", numbers));
 
 $({
   person: {
@@ -73,4 +77,22 @@ $({
 });
 
 // Begin The Chaos, Start Render Engine
-_.erupt(layout([], _.RowOfStuff));
+// _.erupt(layout([], _.RowOfStuff));
+
+// Reactive HTML Templates
+$$(person => {
+  const Person = person =>
+    html`
+      <div>${person.name} is ${person.age} years old.</div>
+    `;
+  render(Person(person), document.body);
+});
+
+setInterval(() => {
+  $({
+    person: {
+      ..._.person,
+      age: Math.round(Math.random() * 100)
+    }
+  });
+}, 100);

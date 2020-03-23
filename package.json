@@ -1,18 +1,24 @@
 {
-  "name": "recoil",
+  "name": "@s0kil/recoil",
   "version": "0.0.1",
+  "author": "s0kil",
+  "license": "MIT",
+  "keywords": [],
   "description": "Recoil: The Toolkit For Building Web Interfaces",
   "main": "index.js",
+  "repository": {
+    "url": "git://github.com/s0kil/recoil.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "dev": "poi --serve",
     "build": "poi --production --public-url ./",
     "serve": "cd dist && python3 -m http.server 4000"
   },
-  "keywords": [],
-  "author": "s0kil",
-  "license": "MIT",
   "devDependencies": {
-    "memoize-one": "^5.1.1",
+    "lit-html": "^1.2.1",
     "poi": "^12.7.5"
   }
 }
