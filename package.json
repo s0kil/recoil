@@ -16,9 +16,12 @@
     "dev": "poi --serve",
     "build": "poi --production",
     "serve": "cd dist && python3 -m http.server 4000",
-    "test": "jest"
+    "test": "jest",
+    "benchmark": "node -r esm benchmark.js"
   },
   "devDependencies": {
+    "benchmark": "^2.1.4",
+    "esm": "^3.2.25",
     "fast-check": "^1.23.0",
     "jest": "^25.1.0",
     "poi": "^12.7.5"
