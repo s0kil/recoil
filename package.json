@@ -4,7 +4,7 @@
   "author": "s0kil",
   "license": "MIT",
   "keywords": [],
-  "description": "Recoil: The Toolkit For Building Web Interfaces",
+  "description": "Recoil: The Toolkit For Immutable And Reactive Computations",
   "main": "index.js",
   "repository": {
     "url": "git://github.com/s0kil/recoil.git"

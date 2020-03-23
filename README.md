@@ -1,4 +1,4 @@
-# Recoil: The Toolkit For Building Web Interfaces
+# Recoil: The Toolkit For Immutable And Reactive Computations
 
 ## API
 
