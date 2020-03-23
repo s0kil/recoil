@@ -14,11 +14,13 @@
   },
   "scripts": {
     "dev": "poi --serve",
-    "build": "poi --production --public-url ./",
-    "serve": "cd dist && python3 -m http.server 4000"
+    "build": "poi --production",
+    "serve": "cd dist && python3 -m http.server 4000",
+    "test": "jest"
   },
   "devDependencies": {
-    "lit-html": "^1.2.1",
+    "fast-check": "^1.23.0",
+    "jest": "^25.1.0",
     "poi": "^12.7.5"
   }
 }

@@ -4,7 +4,6 @@ import { functionArguments, inEach } from "./utilities";
 const Recoil = {
   // `$` Updates State
   $: function(toUpdate) {
-    // TODO: Track Updates To Enable Reactivity
     for (const key in toUpdate) {
       switch (key) {
         // Check For Restricted Behavior
@@ -16,11 +15,6 @@ const Recoil = {
           // Continue Object Update
           MutationLock.unlock();
           Recoil[key] = toUpdate[key];
-
-          /* THINK
-            When A Function Is Dependent On More Than One Arguments,
-            That Will Cause Multiple Re-Renders. Maybe Have A Queue?
-          */
 
           // If Binding Exists
           if (key in Bindings) {
@@ -117,6 +111,4 @@ function ImmutableProxy(any) {
   return any;
 }
 
-export const _ = ImmutableProxy(Recoil);
-export const $ = _.$;
-export const $$ = _.$$;
+export default ImmutableProxy(Recoil);
