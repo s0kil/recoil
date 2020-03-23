@@ -5,7 +5,6 @@
   "license": "MIT",
   "keywords": [],
   "description": "Recoil: The Toolkit For Immutable And Reactive Computations",
-  "main": "index.js",
   "repository": {
     "url": "git://github.com/s0kil/recoil.git"
   },
@@ -13,17 +12,17 @@
     "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
-    "dev": "poi --serve",
-    "build": "poi --production",
+    "dev": "microbundle watch index.js",
+    "build": "microbundle build index.js",
     "serve": "cd dist && python3 -m http.server 4000",
     "test": "jest",
-    "benchmark": "node -r esm benchmark.js"
+    "benchmark": "node -r esm benchmark.js | tee benchmark_$(date +%Y-%m-%d-%H:%M).log"
   },
   "devDependencies": {
     "benchmark": "^2.1.4",
     "esm": "^3.2.25",
     "fast-check": "^1.23.0",
     "jest": "^25.1.0",
-    "poi": "^12.7.5"
+    "microbundle": "^0.11.0"
   }
 }
