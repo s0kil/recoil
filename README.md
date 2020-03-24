@@ -3,7 +3,7 @@
 ## API
 
 ```JavaScript
-import { $, $$, _ } from "./recoil";
+import { $, $$, _ } from "recoil";
 import { html, render } from "lit-html";
 
 _.numbers = [1, 2, 3, 4, 5];

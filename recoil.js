@@ -34,11 +34,6 @@ const Recoil = {
   $$: function(reactiveFunction) {
     const reactiveFunctionArguments = functionArguments(reactiveFunction);
 
-    // Callback With Arguments Binding To State
-    reactiveFunction(
-      ...reactiveFunctionArguments.map(argument => Recoil[argument])
-    );
-
     inEach(reactiveFunctionArguments, arg => {
       // Bind `argument` To Array Of Dependent Functions
       if (arg in Bindings) {
@@ -47,6 +42,11 @@ const Recoil = {
         Bindings[arg] = [reactiveFunction];
       }
     });
+
+    // Callback With Arguments Binding To State
+    return reactiveFunction(
+      ...reactiveFunctionArguments.map(argument => Recoil[argument])
+    );
   }
 };
 
